@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Compoe a peca a partir dos digitos de pi e grava MIDI, MusicXML e o sidecar do mapeamento.
+# Uso: bin/gerar-melodia [--digitos N] [--saida build/pi-poc]
+set -euo pipefail
+R="$(cd "$(dirname "$0")/.." && pwd)"
+exec "$R/.venv/bin/python" "$R/src/compor.py" "$@"

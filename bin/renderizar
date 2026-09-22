@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# MIDI -> WAV -> MP3 sem placa de som (tinysoundfont + sox + ffmpeg).
+# Uso: bin/renderizar build/pi-poc.mid
+set -euo pipefail
+R="$(cd "$(dirname "$0")/.." && pwd)"
+exec "$R/.venv/bin/python" "$R/src/renderizar.py" "$@"

@@ -1,0 +1,17 @@
+# O ambiente e o cache
+.venv/
+__pycache__/
+
+# O SoundFont tem 141 MB e se baixa de novo: fica fora do histórico.
+assets/soundfonts/*.sf2
+
+# De build/ entra só o que se escuta, se lê e se imprime. O WAV é o intermediário
+# do MP3 e soma 291 MB; o HTML da gravura é andaime do PDF.
+build/*
+!build/*.mp3
+!build/*.pdf
+!build/*.musicxml
+!build/*.mid
+!build/escuta/
+build/escuta/*
+!build/escuta/*.mp3
