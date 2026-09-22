@@ -14,7 +14,7 @@ A versão atual é a **v10, "menor que vira maior"**: sexteto, 1 min 41 s. Os 31
 | `build/v10-grade.musicxml` | a mesma grade para abrir no MuseScore, Sibelius ou Finale |
 | `build/v10.mid` | o MIDI, que é de onde o oráculo lê os dígitos de volta |
 
-As versões anteriores estão em `build/` com o mesmo padrão de nome, da `pi-poc` à `v9`. Elas ficam porque a peça foi feita por camadas, e ouvir a v2 depois da v10 mostra o que cada decisão acrescentou.
+As versões anteriores estão em `build/` com o mesmo padrão de nome, da `v2` à `v9`. Elas ficam porque a peça foi feita por camadas, e ouvir a v2 depois da v10 mostra o que cada decisão acrescentou. As PoCs de antes da v2 (`pi-poc`, `pi-flauta`, `fib7`/`fib10` e as demais) foram descartadas: não eram versões da peça, eram teste de ideia solta.
 
 ## Comandos
 
