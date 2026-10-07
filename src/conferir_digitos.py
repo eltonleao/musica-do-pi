@@ -221,7 +221,14 @@ def main() -> int:
         print("uso: conferir_digitos.py <arquivo.mid>")
         return 2
     midi = Path(sys.argv[1])
-    sidecar = midi.with_name(midi.stem + "-mapeamento.json")
+    # O sidecar mora em build/json/, não ao lado do .mid: build/ separa por tipo
+    # de arquivo desde a reorganização de 22/09/2026, e essa é a única exceção em
+    # que dois arquivos de um mesmo par precisam se achar em pastas diferentes.
+    sidecar = midi.parent.parent / "json" / (midi.stem + "-mapeamento.json")
+    if not sidecar.exists():
+        sidecar_ao_lado = midi.with_name(midi.stem + "-mapeamento.json")
+        if sidecar_ao_lado.exists():
+            sidecar = sidecar_ao_lado
     if not midi.exists() or not sidecar.exists():
         print(f"UNKNOWN: falta {midi if not midi.exists() else sidecar}")
         return 2
